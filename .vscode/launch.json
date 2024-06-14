@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C#: DapperMySQL.Api",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/DapperMySQL.Api/bin/Debug/net9.0/DapperMySQL.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/DapperMySQL.Api",
+      "launchSettingsFilePath": "${workspaceFolder}/src/DapperMySQL.Api/Properties/launchSettings.json",
+      "launchSettingsProfile": "http",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(http://\\S+)",
+        "uriFormat": "%s/swagger/"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/": "${workspaceFolder}/src/DapperMySQL.Api/"
+      }
+    }
+  ]
+}
